@@ -34,7 +34,7 @@ export default function AcademicsPage() {
               <h2 className="section-title">Academic Excellence</h2>
             </div>
             <p className="mb-4 text-muted-foreground">
-              At Angels School, we offer a comprehensive range of academic programs designed to challenge and
+              At academiauniversity, we offer a comprehensive range of academic programs designed to challenge and
               inspire students. Our curriculum combines theoretical knowledge with practical skills, preparing graduates
               who are ready to make meaningful contributions in their fields.
             </p>
@@ -70,7 +70,7 @@ export default function AcademicsPage() {
               <h2 className="section-title">Our Programs</h2>
             </div>
             <p className="mx-auto max-w-2xl text-muted-foreground">
-              Explore the wide range of academic programs available at Angels School.
+              Explore the wide range of academic programs available at academiauniversity.
             </p>
           </div>
 
@@ -515,7 +515,7 @@ export default function AcademicsPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 animate-slide-up">Academic Resources</h2>
           <p className="mx-auto max-w-2xl mb-8 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Angels School provides a wealth of resources to support your academic journey, from tutoring services
+            academiauniversity provides a wealth of resources to support your academic journey, from tutoring services
             to research opportunities.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

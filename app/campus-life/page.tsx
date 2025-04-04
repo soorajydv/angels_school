@@ -50,7 +50,7 @@ export default function CampusLifePage() {
               <h2 className="section-title">Student Life</h2>
             </div>
             <p className="mb-4 text-muted-foreground">
-              At Angels School, campus life is a rich tapestry of experiences that complement your academic
+              At academiauniversity, campus life is a rich tapestry of experiences that complement your academic
               journey. From joining student organizations to participating in campus traditions, you'll find countless
               ways to connect with peers, pursue your passions, and create lasting memories.
             </p>
@@ -625,7 +625,7 @@ export default function CampusLifePage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 animate-slide-up">Student Support Services</h2>
           <p className="mx-auto max-w-2xl mb-8 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Angels School offers comprehensive support services to help you succeed academically, professionally,
+            academiauniversity offers comprehensive support services to help you succeed academically, professionally,
             and personally throughout your educational journey.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

@@ -150,7 +150,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <address className="not-italic">
-                  <p>Angels School</p>
+                  <p>academiauniversity</p>
                   <p>123 Education Avenue</p>
                   <p>Academic City, AC 12345</p>
                   <p>United States</p>
@@ -504,7 +504,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 animate-slide-up">Follow Us</h2>
           <p className="mx-auto max-w-2xl mb-8 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Connect with Angels School on social media to stay updated on news, events, and campus life.
+            Connect with academiauniversity on social media to stay updated on news, events, and campus life.
           </p>
           <div className="flex justify-center space-x-6 animate-slide-up" style={{ animationDelay: "0.2s" }}>
             <Link href="#" className="bg-white/20 hover:bg-white/30 p-4 rounded-full transition-colors duration-300">

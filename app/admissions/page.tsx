@@ -33,7 +33,7 @@ export default function AdmissionsPage() {
         <div className="page-header-content">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">Join Our Community</h1>
           <p className="text-xl opacity-90 max-w-3xl animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Begin your journey at Angels School and transform your future.
+            Begin your journey at academiauniversity and transform your future.
           </p>
           <div
             className="mt-8 flex flex-wrap gap-4 justify-center md:justify-start animate-slide-up"
@@ -54,7 +54,7 @@ export default function AdmissionsPage() {
         <div className="text-center mb-12 animate-slide-up">
           <div className="flex items-center gap-2 justify-center mb-4">
             <CheckCircle className="h-6 w-6 text-primary" />
-            <h2 className="section-title">Why Choose Angels School</h2>
+            <h2 className="section-title">Why Choose academiauniversity</h2>
           </div>
           <p className="mx-auto max-w-2xl text-muted-foreground">
             Discover what sets us apart and why our university is the right choice for your education.
@@ -573,7 +573,7 @@ export default function AdmissionsPage() {
             <h2 className="section-title">Frequently Asked Questions</h2>
           </div>
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            Find answers to common questions about applying to Angels School.
+            Find answers to common questions about applying to academiauniversity.
           </p>
         </div>
 

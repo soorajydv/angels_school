@@ -18,7 +18,7 @@ export default function AboutPage() {
           className="w-full h-[500px] object-cover absolute top-0 left-0"
         />
         <div className="page-header-content">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">About Angels School</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">About academiauniversity</h1>
           <p className="text-xl opacity-90 max-w-3xl animate-slide-up" style={{ animationDelay: "0.1s" }}>
             Discover our rich history, mission, values, and the people who make our institution exceptional.
           </p>
@@ -34,7 +34,7 @@ export default function AboutPage() {
               <h2 className="section-title">Our History</h2>
             </div>
             <p className="mb-4 text-muted-foreground">
-              Founded in 1985, Angels School began as a small college with just three departments and 200
+              Founded in 1985, academiauniversity began as a small college with just three departments and 200
               students. Our founders envisioned an institution that would provide accessible, quality education to all
               students, regardless of background.
             </p>
@@ -44,7 +44,7 @@ export default function AboutPage() {
               educational reforms, we've remained committed to our founding principles.
             </p>
             <p className="mb-4 text-muted-foreground">
-              Today, Angels School stands as a beacon of educational excellence, with over 15,000 students from 50
+              Today, academiauniversity stands as a beacon of educational excellence, with over 15,000 students from 50
               countries, a distinguished faculty, and state-of-the-art facilities that support our academic mission.
             </p>
           </div>
@@ -82,7 +82,7 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p>
-                  Angels School is dedicated to educational excellence, innovative research, and community
+                  academiauniversity is dedicated to educational excellence, innovative research, and community
                   engagement. We strive to create a supportive and inclusive learning environment where students develop
                   the knowledge, skills, and values needed to excel in their professions and contribute meaningfully to
                   society.
@@ -234,7 +234,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
               <p className="mb-4">
-                Angels School is proud to be accredited by the Higher Education Accreditation Commission (HEAC), a
+                academiauniversity is proud to be accredited by the Higher Education Accreditation Commission (HEAC), a
                 recognition of our commitment to academic excellence and continuous improvement.
               </p>
               <p className="mb-4">
@@ -322,7 +322,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 animate-slide-up">Experience Our Campus</h2>
           <p className="mx-auto max-w-2xl mb-8 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            The best way to understand what makes Angels School special is to visit our beautiful campus. Schedule
+            The best way to understand what makes academiauniversity special is to visit our beautiful campus. Schedule
             a tour today to see our facilities, meet faculty, and experience student life firsthand.
           </p>
           <Button size="lg" variant="secondary" className="animate-slide-up" style={{ animationDelay: "0.2s" }} asChild>

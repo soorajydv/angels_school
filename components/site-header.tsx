@@ -9,7 +9,7 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center">
         <Link href="/" className="flex items-center space-x-2">
           <GraduationCap className="h-6 w-6" />
-          <span className="font-bold">Angels School</span>
+          <span className="font-bold">academiauniversity</span>
         </Link>
         <nav className="hidden md:flex mx-6 items-center space-x-4 lg:space-x-6">
           <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
