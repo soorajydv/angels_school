@@ -1,55 +1,106 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Calendar, Clock, GraduationCap, Library, MapPin, Phone, Users } from "lucide-react"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+"use client";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Calendar,
+  Clock,
+  GraduationCap,
+  Library,
+  MapPin,
+  Phone,
+  Users,
+} from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const images = [
-  "/images/banner1.jpg",
+  "/images/angels-school-landingpage.png",
   "/images/banner2.jpg",
-  "/images/banner3.jpg"
+  "/images/banner3.jpg",
 ];
 
 export default function Home() {
-  console.log(images.length);
-  
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    // Log the images array to check if the paths are correct
+    console.log("Images array:", images);
+    console.log("Number of images:", images.length);
+
+    // Check if each image exists in the public folder (optional check)
+    images.forEach((image, index) => {
+      const img = new window.Image();
+      img.src = image;
+      img.onload = () => {
+        console.log(`Image ${index + 1} loaded successfully: ${image}`);
+      };
+      img.onerror = () => {
+        console.log(`Error loading image ${index + 1}: ${image}`);
+      };
+    });
+  }, []);
+
   return (
     <div className="flex min-h-screen flex-col">
-    {/* Carousel Section */}
-    <div className="relative w-full overflow-hidden h-[calc(100vh-2rem)]">
-        <Carousel opts={{ loop: true }} className="relative w-full h-full">
-          <CarouselPrevious />
-          <CarouselContent>
-            {images.map((src, index) => (
-              <CarouselItem key={index} className="relative w-full h-full">
-              <Image src={src} alt={`Banner ${index + 1}`} width={1920} height={600} className="w-full h-[calc(100vh-2rem)] object-cover" />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselNext />
-        </Carousel>
+      {/* Single Image Banner */}
+      <div className="w-full px-4 py-8 md:px-8 md:py-8">
+        <div className="relative w-full h-[50vh] md:h-[70vh] lg:h-[80vh] mx-auto">
+          <Card className="w-full h-full overflow-hidden">
+            <CardContent className="p-0 h-full relative">
+              <Image
+                src="/images/angels-school-landingpage.png"
+                alt="Banner"
+                fill
+                className="object-contain"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+              />
+            </CardContent>
+          </Card>
+        </div>
       </div>
-  <div className="container relative z-20 mx-auto px-4 py-32 text-center md:py-48">
-    <h1 className="mb-4 text-4xl font-bold tracking-tight text-black sm:text-5xl md:text-6xl">
-      Excellence in Education
-    </h1>
-    <p className="mx-auto mb-8 max-w-2xl text-lg text-black/90 md:text-xl">
-      Empowering students to achieve academic excellence and personal growth in a supportive environment.
-    </p>
-    <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 justify-center">
-      <Button size="lg" asChild>
-        <Link href="/admissions">Apply Now</Link>
-      </Button>
-      <Button size="lg" variant="outline" className="bg-white/10 text-black hover:bg-white/20" asChild>
-        <Link href="/campus-tour">Schedule a Visit</Link>
-      </Button>
-    </div>
-  </div>
 
+      {/* Hero */}
+      <div className="container relative z-20 mx-auto px-4 py-16 text-center md:py-32">
+        <h1 className="mb-4 text-4xl font-bold tracking-tight text-black sm:text-5xl md:text-6xl">
+          Excellence in Education
+        </h1>
+        <p className="mx-auto mb-8 max-w-2xl text-lg text-black/90 md:text-xl">
+          Empowering students to achieve academic excellence and personal growth
+          in a supportive environment.
+        </p>
+        <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 justify-center">
+          <Button size="lg" asChild>
+            <Link href="/admissions">Apply Now</Link>
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="bg-white/10 text-black hover:bg-white/20"
+            asChild
+          >
+            <Link href="/campus-tour">Schedule a Visit</Link>
+          </Button>
+        </div>
+      </div>
 
-      {/* Quick Info Section */}
+      {/* Info Cards */}
       <section className="bg-muted py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -61,10 +112,16 @@ export default function Home() {
                 </div>
               </CardHeader>
               <CardContent>
-                <p>Offering a wide range of programs with experienced faculty and modern facilities.</p>
+                <p>
+                  Offering a wide range of programs with experienced faculty and
+                  modern facilities.
+                </p>
               </CardContent>
               <CardFooter>
-                <Link href="/academics" className="text-sm text-primary hover:underline">
+                <Link
+                  href="/academics"
+                  className="text-sm text-primary hover:underline"
+                >
                   Explore Programs →
                 </Link>
               </CardFooter>
@@ -77,10 +134,16 @@ export default function Home() {
                 </div>
               </CardHeader>
               <CardContent>
-                <p>Vibrant campus community with clubs, sports, and cultural activities for all interests.</p>
+                <p>
+                  Vibrant campus community with clubs, sports, and cultural
+                  activities for all interests.
+                </p>
               </CardContent>
               <CardFooter>
-                <Link href="/campus-life" className="text-sm text-primary hover:underline">
+                <Link
+                  href="/campus-life"
+                  className="text-sm text-primary hover:underline"
+                >
                   Discover Activities →
                 </Link>
               </CardFooter>
@@ -93,10 +156,16 @@ export default function Home() {
                 </div>
               </CardHeader>
               <CardContent>
-                <p>State-of-the-art libraries, labs, and recreational spaces to enhance learning.</p>
+                <p>
+                  State-of-the-art libraries, labs, and recreational spaces to
+                  enhance learning.
+                </p>
               </CardContent>
               <CardFooter>
-                <Link href="/facilities" className="text-sm text-primary hover:underline">
+                <Link
+                  href="/facilities"
+                  className="text-sm text-primary hover:underline"
+                >
                   View Facilities →
                 </Link>
               </CardFooter>
@@ -110,22 +179,32 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight mb-6">About Our Institution</h2>
+              <h2 className="text-3xl font-bold tracking-tight mb-6">
+                About Our Institution
+              </h2>
               <p className="mb-4 text-muted-foreground">
-                Founded in 1985, our institution has been committed to providing quality education that prepares
-                students for the challenges of tomorrow. With a focus on academic excellence, innovation, and character
-                development, we strive to create a learning environment where every student can thrive.
+                Founded in 1985, our institution has been committed to providing
+                quality education that prepares students for the challenges of
+                tomorrow. With a focus on academic excellence, innovation, and
+                character development, we strive to create a learning
+                environment where every student can thrive.
               </p>
               <p className="mb-6 text-muted-foreground">
-                Our dedicated faculty, modern facilities, and comprehensive curriculum ensure that students receive a
-                well-rounded education that equips them for success in their chosen fields.
+                Our dedicated faculty, modern facilities, and comprehensive
+                curriculum ensure that students receive a well-rounded education
+                that equips them for success in their chosen fields.
               </p>
               <Button asChild>
                 <Link href="/about">Learn More About Us</Link>
               </Button>
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image src="/images/banner2.jpg?height=400&width=600" fill alt="Campus building" className="object-cover" />
+              <Image
+                src="/images/angels-building.jpg?height=400&width=600"
+                fill
+                alt="Campus building"
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -135,13 +214,19 @@ export default function Home() {
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight mb-4">Our Academic Programs</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-4">
+              Our Academic Programs
+            </h2>
             <p className="mx-auto max-w-2xl text-muted-foreground">
-              Discover our diverse range of programs designed to help you achieve your academic and career goals.
+              Discover our diverse range of programs designed to help you
+              achieve your academic and career goals.
             </p>
           </div>
 
-          <Tabs defaultValue="undergraduate" className="w-full max-w-4xl mx-auto">
+          <Tabs
+            defaultValue="undergraduate"
+            className="w-full max-w-4xl mx-auto"
+          >
             <TabsList className="grid w-full grid-cols-3">
               <TabsTrigger value="undergraduate">Undergraduate</TabsTrigger>
               <TabsTrigger value="graduate">Graduate</TabsTrigger>
@@ -152,10 +237,15 @@ export default function Home() {
                 <Card>
                   <CardHeader>
                     <CardTitle>Bachelor of Science</CardTitle>
-                    <CardDescription>Computer Science, Biology, Mathematics</CardDescription>
+                    <CardDescription>
+                      Computer Science, Biology, Mathematics
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p>Four-year programs focusing on scientific principles and practical applications.</p>
+                    <p>
+                      Four-year programs focusing on scientific principles and
+                      practical applications.
+                    </p>
                   </CardContent>
                   <CardFooter>
                     <Button variant="outline" asChild>
@@ -166,10 +256,15 @@ export default function Home() {
                 <Card>
                   <CardHeader>
                     <CardTitle>Bachelor of Arts</CardTitle>
-                    <CardDescription>English, History, Psychology</CardDescription>
+                    <CardDescription>
+                      English, History, Psychology
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p>Four-year programs developing critical thinking and communication skills.</p>
+                    <p>
+                      Four-year programs developing critical thinking and
+                      communication skills.
+                    </p>
                   </CardContent>
                   <CardFooter>
                     <Button variant="outline" asChild>
@@ -184,10 +279,15 @@ export default function Home() {
                 <Card>
                   <CardHeader>
                     <CardTitle>Master of Science</CardTitle>
-                    <CardDescription>Data Science, Environmental Studies</CardDescription>
+                    <CardDescription>
+                      Data Science, Environmental Studies
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p>Advanced programs preparing students for specialized careers or research.</p>
+                    <p>
+                      Advanced programs preparing students for specialized
+                      careers or research.
+                    </p>
                   </CardContent>
                   <CardFooter>
                     <Button variant="outline" asChild>
@@ -198,10 +298,15 @@ export default function Home() {
                 <Card>
                   <CardHeader>
                     <CardTitle>Master of Business Administration</CardTitle>
-                    <CardDescription>Finance, Marketing, Management</CardDescription>
+                    <CardDescription>
+                      Finance, Marketing, Management
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p>Comprehensive business education for aspiring leaders and entrepreneurs.</p>
+                    <p>
+                      Comprehensive business education for aspiring leaders and
+                      entrepreneurs.
+                    </p>
                   </CardContent>
                   <CardFooter>
                     <Button variant="outline" asChild>
@@ -216,10 +321,15 @@ export default function Home() {
                 <Card>
                   <CardHeader>
                     <CardTitle>Professional Certificates</CardTitle>
-                    <CardDescription>Project Management, Digital Marketing</CardDescription>
+                    <CardDescription>
+                      Project Management, Digital Marketing
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p>Short-term programs designed to build specific skills for career advancement.</p>
+                    <p>
+                      Short-term programs designed to build specific skills for
+                      career advancement.
+                    </p>
                   </CardContent>
                   <CardFooter>
                     <Button variant="outline" asChild>
@@ -230,10 +340,15 @@ export default function Home() {
                 <Card>
                   <CardHeader>
                     <CardTitle>Technical Certificates</CardTitle>
-                    <CardDescription>Web Development, Cybersecurity</CardDescription>
+                    <CardDescription>
+                      Web Development, Cybersecurity
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p>Focused technical training to prepare for in-demand technology careers.</p>
+                    <p>
+                      Focused technical training to prepare for in-demand
+                      technology careers.
+                    </p>
                   </CardContent>
                   <CardFooter>
                     <Button variant="outline" asChild>
@@ -251,9 +366,12 @@ export default function Home() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight mb-4">Upcoming Events</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-4">
+              Upcoming Events
+            </h2>
             <p className="mx-auto max-w-2xl text-muted-foreground">
-              Stay connected with our community through various events and activities.
+              Stay connected with our community through various events and
+              activities.
             </p>
           </div>
 
@@ -266,7 +384,10 @@ export default function Home() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p>Explore our campus, meet faculty, and learn about our programs during this informative event.</p>
+                <p>
+                  Explore our campus, meet faculty, and learn about our programs
+                  during this informative event.
+                </p>
               </CardContent>
               <CardFooter className="flex justify-between">
                 <div className="flex items-center text-sm text-muted-foreground">
@@ -286,7 +407,10 @@ export default function Home() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p>Join us for an inspiring lecture by industry leaders on emerging trends in technology.</p>
+                <p>
+                  Join us for an inspiring lecture by industry leaders on
+                  emerging trends in technology.
+                </p>
               </CardContent>
               <CardFooter className="flex justify-between">
                 <div className="flex items-center text-sm text-muted-foreground">
@@ -306,7 +430,10 @@ export default function Home() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p>Connect with alumni and build valuable professional relationships at this networking event.</p>
+                <p>
+                  Connect with alumni and build valuable professional
+                  relationships at this networking event.
+                </p>
               </CardContent>
               <CardFooter className="flex justify-between">
                 <div className="flex items-center text-sm text-muted-foreground">
@@ -331,7 +458,9 @@ export default function Home() {
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight mb-4">What Our Students Say</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-4">
+              What Our Students Say
+            </h2>
             <p className="mx-auto max-w-2xl text-muted-foreground">
               Hear from our students about their experiences at our institution.
             </p>
@@ -342,7 +471,7 @@ export default function Home() {
               <CardContent className="pt-6">
                 <div className="mb-4">
                   <Image
-                    src="/images/banner2.jpg?height=80&width=80"
+                    src="/images/avatar.png?height=80&width=80"
                     width={80}
                     height={80}
                     alt="Student"
@@ -350,11 +479,14 @@ export default function Home() {
                   />
                 </div>
                 <p className="text-center italic mb-4">
-                  "The supportive faculty and diverse learning opportunities have prepared me well for my career. I'm
-                  grateful for the experiences I've had here."
+                  "The supportive faculty and diverse learning opportunities
+                  have prepared me well for my career. I'm grateful for the
+                  experiences I've had here."
                 </p>
                 <p className="text-center font-semibold">Sarah Johnson</p>
-                <p className="text-center text-sm text-muted-foreground">Computer Science, Class of 2024</p>
+                <p className="text-center text-sm text-muted-foreground">
+                  Computer Science, Class of 2024
+                </p>
               </CardContent>
             </Card>
 
@@ -362,7 +494,7 @@ export default function Home() {
               <CardContent className="pt-6">
                 <div className="mb-4">
                   <Image
-                    src="/images/banner2.jpg?height=80&width=80"
+                    src="/images/avatar.png?height=80&width=80"
                     width={80}
                     height={80}
                     alt="Student"
@@ -370,11 +502,14 @@ export default function Home() {
                   />
                 </div>
                 <p className="text-center italic mb-4">
-                  "The hands-on learning approach and research opportunities have been invaluable. I've grown both
-                  academically and personally during my time here."
+                  "The hands-on learning approach and research opportunities
+                  have been invaluable. I've grown both academically and
+                  personally during my time here."
                 </p>
                 <p className="text-center font-semibold">Michael Chen</p>
-                <p className="text-center text-sm text-muted-foreground">Biology, Class of 2023</p>
+                <p className="text-center text-sm text-muted-foreground">
+                  Biology, Class of 2023
+                </p>
               </CardContent>
             </Card>
 
@@ -382,7 +517,7 @@ export default function Home() {
               <CardContent className="pt-6">
                 <div className="mb-4">
                   <Image
-                    src="/images/banner2.jpg?height=80&width=80"
+                    src="/images/avatar.png?height=80&width=80"
                     width={80}
                     height={80}
                     alt="Student"
@@ -390,11 +525,14 @@ export default function Home() {
                   />
                 </div>
                 <p className="text-center italic mb-4">
-                  "The vibrant campus community and extracurricular activities have made my college experience
-                  unforgettable. I've made lifelong friends and connections."
+                  "The vibrant campus community and extracurricular activities
+                  have made my college experience unforgettable. I've made
+                  lifelong friends and connections."
                 </p>
                 <p className="text-center font-semibold">Emily Rodriguez</p>
-                <p className="text-center text-sm text-muted-foreground">Business Administration, Class of 2025</p>
+                <p className="text-center text-sm text-muted-foreground">
+                  Business Administration, Class of 2025
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -406,10 +544,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid gap-12 md:grid-cols-2">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight mb-6">Contact Us</h2>
+              <h2 className="text-3xl font-bold tracking-tight mb-6">
+                Contact Us
+              </h2>
               <p className="mb-8 text-muted-foreground">
-                Have questions or need more information? We're here to help. Reach out to us using the contact form or
-                the information below.
+                Have questions or need more information? We're here to help.
+                Reach out to us using the contact form or the information below.
               </p>
 
               <div className="space-y-4">
@@ -417,7 +557,9 @@ export default function Home() {
                   <MapPin className="h-5 w-5 text-primary mr-3 mt-0.5" />
                   <div>
                     <h3 className="font-medium">Address</h3>
-                    <p className="text-muted-foreground">123 Education Avenue, Academic City, AC 12345</p>
+                    <p className="text-muted-foreground">
+                      123 Education Avenue, Academic City, AC 12345
+                    </p>
                   </div>
                 </div>
 
@@ -433,7 +575,9 @@ export default function Home() {
                   <Clock className="h-5 w-5 text-primary mr-3 mt-0.5" />
                   <div>
                     <h3 className="font-medium">Office Hours</h3>
-                    <p className="text-muted-foreground">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    <p className="text-muted-foreground">
+                      Monday - Friday: 8:00 AM - 5:00 PM
+                    </p>
                   </div>
                 </div>
               </div>
@@ -508,6 +652,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  )
+  );
 }
-

@@ -9,7 +9,7 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center">
         <Link href="/" className="flex items-center space-x-2">
           <GraduationCap className="h-6 w-6" />
-          <span className="font-bold">academiauniversity</span>
+          <span className="font-bold">Angels school</span>
         </Link>
         <nav className="hidden md:flex mx-6 items-center space-x-4 lg:space-x-6">
           <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
@@ -37,7 +37,7 @@ export function SiteHeader() {
             href="/campus-life"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
           >
-            Campus Life
+            School Life
           </Link>
           <Link href="/news" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
             News & Events
@@ -79,7 +79,7 @@ export function SiteHeader() {
                 <Link href="/admissions">Admissions</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/campus-life">Campus Life</Link>
+                <Link href="/campus-life">School Life</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Link href="/news">News & Events</Link>

@@ -150,7 +150,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <address className="not-italic">
-                  <p>academiauniversity</p>
+                  <p>Angels school</p>
                   <p>123 Education Avenue</p>
                   <p>Academic City, AC 12345</p>
                   <p>United States</p>
@@ -184,7 +184,7 @@ export default function ContactPage() {
                     <Phone className="h-4 w-4 mr-2" /> (123) 456-7890
                   </p>
                   <p className="flex items-center text-sm">
-                    <Mail className="h-4 w-4 mr-2" /> info@academiauniversity.edu
+                    <Mail className="h-4 w-4 mr-2" /> info@Angels school.edu
                   </p>
                 </div>
                 <div>
@@ -193,7 +193,7 @@ export default function ContactPage() {
                     <Phone className="h-4 w-4 mr-2" /> (123) 456-7891
                   </p>
                   <p className="flex items-center text-sm">
-                    <Mail className="h-4 w-4 mr-2" /> admissions@academiauniversity.edu
+                    <Mail className="h-4 w-4 mr-2" /> admissions@Angels school.edu
                   </p>
                 </div>
                 <div>
@@ -202,7 +202,7 @@ export default function ContactPage() {
                     <Phone className="h-4 w-4 mr-2" /> (123) 456-7892
                   </p>
                   <p className="flex items-center text-sm">
-                    <Mail className="h-4 w-4 mr-2" /> finaid@academiauniversity.edu
+                    <Mail className="h-4 w-4 mr-2" /> finaid@Angels school.edu
                   </p>
                 </div>
                 <div>
@@ -273,32 +273,32 @@ export default function ContactPage() {
                   {
                     name: "School of Arts & Humanities",
                     phone: "(123) 456-7901",
-                    email: "arts@academiauniversity.edu",
+                    email: "arts@Angels school.edu",
                   },
                   {
                     name: "School of Business",
                     phone: "(123) 456-7902",
-                    email: "business@academiauniversity.edu",
+                    email: "business@Angels school.edu",
                   },
                   {
                     name: "School of Education",
                     phone: "(123) 456-7903",
-                    email: "education@academiauniversity.edu",
+                    email: "education@Angels school.edu",
                   },
                   {
                     name: "School of Engineering",
                     phone: "(123) 456-7904",
-                    email: "engineering@academiauniversity.edu",
+                    email: "engineering@Angels school.edu",
                   },
                   {
                     name: "School of Health Sciences",
                     phone: "(123) 456-7905",
-                    email: "health@academiauniversity.edu",
+                    email: "health@Angels school.edu",
                   },
                   {
                     name: "School of Natural Sciences",
                     phone: "(123) 456-7906",
-                    email: "science@academiauniversity.edu",
+                    email: "science@Angels school.edu",
                   },
                 ].map((dept, index) => (
                   <Card key={index} className="hover-card">
@@ -333,32 +333,32 @@ export default function ContactPage() {
                   {
                     name: "Office of the President",
                     phone: "(123) 456-7920",
-                    email: "president@academiauniversity.edu",
+                    email: "president@Angels school.edu",
                   },
                   {
                     name: "Human Resources",
                     phone: "(123) 456-7921",
-                    email: "hr@academiauniversity.edu",
+                    email: "hr@Angels school.edu",
                   },
                   {
                     name: "Finance Office",
                     phone: "(123) 456-7922",
-                    email: "finance@academiauniversity.edu",
+                    email: "finance@Angels school.edu",
                   },
                   {
                     name: "Information Technology",
                     phone: "(123) 456-7923",
-                    email: "it@academiauniversity.edu",
+                    email: "it@Angels school.edu",
                   },
                   {
                     name: "Marketing & Communications",
                     phone: "(123) 456-7924",
-                    email: "marketing@academiauniversity.edu",
+                    email: "marketing@Angels school.edu",
                   },
                   {
                     name: "Facilities Management",
                     phone: "(123) 456-7925",
-                    email: "facilities@academiauniversity.edu",
+                    email: "facilities@Angels school.edu",
                   },
                 ].map((dept, index) => (
                   <Card key={index} className="hover-card">
@@ -391,32 +391,32 @@ export default function ContactPage() {
                   {
                     name: "Admissions Office",
                     phone: "(123) 456-7930",
-                    email: "admissions@academiauniversity.edu",
+                    email: "admissions@Angels school.edu",
                   },
                   {
                     name: "Financial Aid",
                     phone: "(123) 456-7931",
-                    email: "finaid@academiauniversity.edu",
+                    email: "finaid@Angels school.edu",
                   },
                   {
                     name: "Registrar's Office",
                     phone: "(123) 456-7932",
-                    email: "registrar@academiauniversity.edu",
+                    email: "registrar@Angels school.edu",
                   },
                   {
                     name: "Career Services",
                     phone: "(123) 456-7933",
-                    email: "careers@academiauniversity.edu",
+                    email: "careers@Angels school.edu",
                   },
                   {
                     name: "Counseling Center",
                     phone: "(123) 456-7934",
-                    email: "counseling@academiauniversity.edu",
+                    email: "counseling@Angels school.edu",
                   },
                   {
                     name: "Student Housing",
                     phone: "(123) 456-7935",
-                    email: "housing@academiauniversity.edu",
+                    email: "housing@Angels school.edu",
                   },
                 ].map((dept, index) => (
                   <Card key={index} className="hover-card">
@@ -462,7 +462,7 @@ export default function ContactPage() {
           {[
             {
               q: "What's the best way to schedule a campus tour?",
-              a: "You can schedule a campus tour online through our Visit page, by calling the Admissions Office at (123) 456-7891, or by emailing admissions@academiauniversity.edu.",
+              a: "You can schedule a campus tour online through our Visit page, by calling the Admissions Office at (123) 456-7891, or by emailing admissions@Angels school.edu.",
             },
             {
               q: "How do I find a specific faculty member's contact information?",
@@ -474,11 +474,11 @@ export default function ContactPage() {
             },
             {
               q: "How do I contact the IT help desk for technical issues?",
-              a: "The IT help desk can be reached at (123) 456-7923 or by emailing helpdesk@academiauniversity.edu. They are available Monday through Friday from 8:00 AM to 8:00 PM.",
+              a: "The IT help desk can be reached at (123) 456-7923 or by emailing helpdesk@Angels school.edu. They are available Monday through Friday from 8:00 AM to 8:00 PM.",
             },
             {
               q: "Where should I direct media inquiries?",
-              a: "Media inquiries should be directed to the Office of Marketing & Communications at (123) 456-7924 or media@academiauniversity.edu.",
+              a: "Media inquiries should be directed to the Office of Marketing & Communications at (123) 456-7924 or media@Angels school.edu.",
             },
           ].map((faq, index) => (
             <Card key={index} className="hover-card">
@@ -504,7 +504,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 animate-slide-up">Follow Us</h2>
           <p className="mx-auto max-w-2xl mb-8 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Connect with academiauniversity on social media to stay updated on news, events, and campus life.
+            Connect with Angels school on social media to stay updated on news, events, and campus life.
           </p>
           <div className="flex justify-center space-x-6 animate-slide-up" style={{ animationDelay: "0.2s" }}>
             <Link href="#" className="bg-white/20 hover:bg-white/30 p-4 rounded-full transition-colors duration-300">

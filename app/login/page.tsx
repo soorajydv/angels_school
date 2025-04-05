@@ -14,7 +14,7 @@ export default function LoginPage() {
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
             <h1 className="text-2xl font-semibold tracking-tight">Welcome Back</h1>
-            <p className="text-sm text-muted-foreground">Sign in to your academiauniversity account</p>
+            <p className="text-sm text-muted-foreground">Sign in to your Angels school account</p>
           </div>
 
           <Tabs defaultValue="student" className="w-full">
@@ -36,7 +36,7 @@ export default function LoginPage() {
                     </Label>
                     <Input
                       id="student-email"
-                      placeholder="student@academiauniversity.edu"
+                      placeholder="student@Angels school.edu"
                       type="email"
                       autoCapitalize="none"
                       autoComplete="email"
@@ -97,7 +97,7 @@ export default function LoginPage() {
                     </Label>
                     <Input
                       id="faculty-email"
-                      placeholder="faculty@academiauniversity.edu"
+                      placeholder="faculty@Angels school.edu"
                       type="email"
                       autoCapitalize="none"
                       autoComplete="email"
@@ -158,7 +158,7 @@ export default function LoginPage() {
                     </Label>
                     <Input
                       id="staff-email"
-                      placeholder="staff@academiauniversity.edu"
+                      placeholder="staff@Angels school.edu"
                       type="email"
                       autoCapitalize="none"
                       autoComplete="email"

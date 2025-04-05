@@ -9,7 +9,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "academiauniversity - Excellence in Education",
+  title: "Angels school - Excellence in Education",
   description: "A leading educational institution dedicated to academic excellence and student success.",
     generator: 'v0.dev'
 }

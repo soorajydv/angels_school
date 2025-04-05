@@ -38,7 +38,7 @@ export default function NewsEventsPage() {
         <div className="page-header-content">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">News & Events</h1>
           <p className="text-xl opacity-90 max-w-3xl animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Stay informed about the latest happenings at academiauniversity.
+            Stay informed about the latest happenings at Angels school.
           </p>
         </div>
       </div>
@@ -77,7 +77,7 @@ export default function NewsEventsPage() {
                     </div>
                     <div className="p-6">
                       <Badge className="mb-2 bg-primary">Featured</Badge>
-                      <h2 className="text-2xl font-bold mb-3">academiauniversity Announces New Research Initiative</h2>
+                      <h2 className="text-2xl font-bold mb-3">Angels school Announces New Research Initiative</h2>
                       <p className="text-muted-foreground mb-4">
                         President Smith unveils a $25 million research initiative focused on sustainable energy
                         solutions, creating new opportunities for faculty and student researchers.
@@ -182,7 +182,7 @@ export default function NewsEventsPage() {
                       date: "March 25, 2025",
                       image: "/banner1?height=200&width=300",
                       excerpt:
-                        "academiauniversity announces a new partnership with TechCorp to provide internship opportunities and collaborative research projects.",
+                        "Angels school announces a new partnership with TechCorp to provide internship opportunities and collaborative research projects.",
                     },
                     {
                       title: "Student Team Wins International Competition",
@@ -198,7 +198,7 @@ export default function NewsEventsPage() {
                       date: "March 15, 2025",
                       image: "/banner1?height=200&width=300",
                       excerpt:
-                        "academiauniversity increases funding for merit and need-based scholarships, making education more accessible.",
+                        "Angels school increases funding for merit and need-based scholarships, making education more accessible.",
                     },
                     {
                       title: "New Sustainability Initiative Launched",
@@ -505,7 +505,7 @@ export default function NewsEventsPage() {
                 <div className="flex items-center space-x-2">
                   <input id="terms" type="checkbox" className="rounded border-gray-300" />
                   <label htmlFor="terms" className="text-sm text-muted-foreground">
-                    I agree to receive emails from academiauniversity. You can unsubscribe at any time.
+                    I agree to receive emails from Angels school. You can unsubscribe at any time.
                   </label>
                 </div>
 

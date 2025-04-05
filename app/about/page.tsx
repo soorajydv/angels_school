@@ -11,14 +11,14 @@ export default function AboutPage() {
       {/* Page Header */}
       <div className="page-header">
         <Image
-          src="/images/banner1.jpg?height=500&width=1600"
+          src="/images/angels-building.jpg?height=500&width=1600"
           width={1600}
           height={500}
           alt="Campus panorama"
           className="w-full h-[500px] object-cover absolute top-0 left-0"
         />
         <div className="page-header-content">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">About academiauniversity</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">About Angels school</h1>
           <p className="text-xl opacity-90 max-w-3xl animate-slide-up" style={{ animationDelay: "0.1s" }}>
             Discover our rich history, mission, values, and the people who make our institution exceptional.
           </p>
@@ -34,7 +34,7 @@ export default function AboutPage() {
               <h2 className="section-title">Our History</h2>
             </div>
             <p className="mb-4 text-muted-foreground">
-              Founded in 1985, academiauniversity began as a small college with just three departments and 200
+              Founded in 1985, Angels school began as a small college with just three departments and 200
               students. Our founders envisioned an institution that would provide accessible, quality education to all
               students, regardless of background.
             </p>
@@ -44,7 +44,7 @@ export default function AboutPage() {
               educational reforms, we've remained committed to our founding principles.
             </p>
             <p className="mb-4 text-muted-foreground">
-              Today, academiauniversity stands as a beacon of educational excellence, with over 15,000 students from 50
+              Today, Angels school stands as a beacon of educational excellence, with over 15,000 students from 50
               countries, a distinguished faculty, and state-of-the-art facilities that support our academic mission.
             </p>
           </div>
@@ -53,7 +53,7 @@ export default function AboutPage() {
             style={{ animationDelay: "0.3s" }}
           >
             <Image
-              src="/images/banner1.jpg?height=400&width=600"
+              src="/images/angels-building.jpg?height=400&width=600"
               fill
               alt="Historical campus building"
               className="object-cover transition-transform duration-500 hover:scale-105"
@@ -82,7 +82,7 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p>
-                  academiauniversity is dedicated to educational excellence, innovative research, and community
+                  Angels school is dedicated to educational excellence, innovative research, and community
                   engagement. We strive to create a supportive and inclusive learning environment where students develop
                   the knowledge, skills, and values needed to excel in their professions and contribute meaningfully to
                   society.
@@ -166,7 +166,7 @@ export default function AboutPage() {
               <CardContent className="pt-6">
                 <div className="mb-4 relative w-32 h-32 mx-auto overflow-hidden rounded-full border-4 border-primary/20">
                   <Image
-                    src={`/images/banner1.jpg?height=128&width=128&text=Leadership+${index}`}
+                    src={`/images/avatar.png?height=128&width=128&text=Leadership+${index}`}
                     width={128}
                     height={128}
                     alt={`Leadership member ${index}`}
@@ -234,7 +234,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
               <p className="mb-4">
-                academiauniversity is proud to be accredited by the Higher Education Accreditation Commission (HEAC), a
+                Angels school is proud to be accredited by the Higher Education Accreditation Commission (HEAC), a
                 recognition of our commitment to academic excellence and continuous improvement.
               </p>
               <p className="mb-4">
@@ -248,21 +248,21 @@ export default function AboutPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Image
-                  src="/images/banner1.jpg?height=80&width=200&text=HEAC"
+                  src="/images/avatar.png?height=80&width=200&text=HEAC"
                   width={200}
                   height={80}
                   alt="HEAC Accreditation"
                   className="object-contain border rounded-md p-2 bg-white"
                 />
                 <Image
-                  src="/images/banner1.jpg?height=80&width=200&text=ABET"
+                  src="/images/avatar.png?height=80&width=200&text=ABET"
                   width={200}
                   height={80}
                   alt="ABET Accreditation"
                   className="object-contain border rounded-md p-2 bg-white"
                 />
                 <Image
-                  src="/images/banner1.jpg?height=80&width=200&text=AACSB"
+                  src="/images/avatar.png?height=80&width=200&text=AACSB"
                   width={200}
                   height={80}
                   alt="AACSB Accreditation"
@@ -322,7 +322,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 animate-slide-up">Experience Our Campus</h2>
           <p className="mx-auto max-w-2xl mb-8 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            The best way to understand what makes academiauniversity special is to visit our beautiful campus. Schedule
+            The best way to understand what makes Angels school special is to visit our beautiful campus. Schedule
             a tour today to see our facilities, meet faculty, and experience student life firsthand.
           </p>
           <Button size="lg" variant="secondary" className="animate-slide-up" style={{ animationDelay: "0.2s" }} asChild>

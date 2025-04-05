@@ -87,13 +87,11 @@ export function SiteFooter() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
             <address className="not-italic text-muted-foreground mb-4">
-              123 Education Avenue
+            Saketnagar, Janakpur, Nepal
               <br />
-              Academic City, AC 12345
+              Phone: 041-523694
               <br />
-              Phone: (123) 456-7890
-              <br />
-              Email: info@academiauniversity.edu
+              Email: angelsschool051@gmail.com
             </address>
             <div className="flex space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-primary">
@@ -119,7 +117,7 @@ export function SiteFooter() {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} academiauniversity. All rights reserved.
+              &copy; {new Date().getFullYear()} Angels school. All rights reserved.
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary">
